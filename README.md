@@ -3,7 +3,8 @@
 <h2>Мы – команда "Аферисты в облаках"<br />
 Это наш репозиторий для курса "Облачные технологии и услуги"</h2>
 
-![image](https://github.com/lexoz-bedra/clouds/assets/76757591/0343a1e0-9d1a-43b0-a306-8ee5b156ad53)
+![image](https://github.com/lexoz-bedra/clouds/assets/76757591/a97e4e27-f12d-4100-9d87-ce7f1bf06829)
+
 
 
 <br />
