@@ -19,19 +19,14 @@
 
 <br />
 <h1>Лабораторные работы:</h1>
-  <li>DevOps лабы</li>
-  <ol>
-    <li>TBA</li>
-    <li>TBA</li>
-    <li>TBA</li>
-  </ol>
-  <li>Аналитические лабы</li>
-  <ol>
-    <li>TBA</li>
-    <li>TBA</li>
-  </ol>
-  <li>Теория</li>
-  <ol>
-    <li>TBA</li>
-    <li>TBA</li>
-  </ol>
+
+* [DevOps лабы](./DevOps_labs)
+    * [Лабораторная работа 1 + задание со свёздочкой](./DevOps_labs/Lab-1/report.md)
+    * [Лабораторная работа 2 (TBA)](./DevOps_labs/Lab-2)
+    * [Лабораторная работа 3 (TBA)](./DevOps_labs/Lab-3)
+* [Аналитические лабы](./Analytical_labs)
+  * TBA
+  * TBA
+* [Теория](./Theory)
+  * TBA
+  * TBA
