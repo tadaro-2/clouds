@@ -29,11 +29,19 @@
 ### BAD DOCKERFILE
 ![плохо](./Pictures/плохойфайл.png)
 
-
 ### GOOD DOCKERFILE
 ![хорошо](./Pictures/хорошийфайл.png)
 
+### Анализ ошибок в сборке и как они были исправлены
+**1.FROM python:latest ---> FROM python:3.12**
 
+
+
+**2.**
+
+**3.**
+
+**4.**
 
 ### Вывод
 
