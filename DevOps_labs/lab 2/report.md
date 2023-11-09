@@ -6,11 +6,11 @@
 
 
 
-### Создание и запуск
+### Telegram bot
 
 За основу в работе с Dockerfile был выбран небольшой телграмм-бот.
 
-![Подключение к ssh 1](./Pictures/ssh-status-tadaro.jpg)
+![Телеграм бот](./Pictures/телега.png)
 
 
 
