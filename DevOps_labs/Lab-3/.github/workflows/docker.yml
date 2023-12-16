@@ -1,0 +1,36 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      run: docker build -t message-image .
+
+    - name: Save Docker Image Result
+      run: |
+        docker save message-image -o result.tar
+        mkdir -p $GITHUB_WORKSPACE/artifacts
+        mv result.tar $GITHUB_WORKSPACE/artifacts/result.tar
+      if: success()
+
+    - name: Extract message.txt
+      run: |
+        docker create --name temp-container message-image
+        docker cp temp-container:/app/message.txt $GITHUB_WORKSPACE/artifacts/message.txt
+        docker rm temp-container
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: docker-image
+        path: $GITHUB_WORKSPACE/artifacts

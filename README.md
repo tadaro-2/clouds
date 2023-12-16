@@ -22,7 +22,7 @@
 
 * [DevOps лабы](./DevOps_labs)
     * [Лабораторная работа 1 + задание со свёздочкой](./DevOps_labs/Lab-1/report.md)
-    * [Лабораторная работа 2 (TBA)](./DevOps_labs/Lab-2)
+    * [Лабораторная работа 2](./DevOps_labs/Lab-2/report.md)
     * [Лабораторная работа 3 (TBA)](./DevOps_labs/Lab-3)
 * [Аналитические лабы](./Analytical_labs)
   * TBA
