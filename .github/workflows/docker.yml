@@ -26,7 +26,7 @@ jobs:
     - name: Extract message.txt
       run: |
         docker create --name temp-container message-image
-        docker cp temp-container:/app/message.txt $GITHUB_WORKSPACE/artifacts/message.txt
+        docker cp temp-container:/DevOps_labs/Lab-3/files/message.txt $GITHUB_WORKSPACE/artifacts/message.txt
         docker rm temp-container
 
     - name: Upload Artifact
