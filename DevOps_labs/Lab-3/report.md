@@ -45,18 +45,18 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: docker build -t your-docker-image-name "..\..\Dockerfile"
+      run: docker build -t message-image "DevOps_labs\Lab-3\Dockerfile"
 
     - name: Save Docker Image Result
       run: |
-        docker save your-docker-image-name -o result.tar
+        docker save message-image -o result.tar
         mkdir -p $GITHUB_WORKSPACE/artifacts
         mv result.tar $GITHUB_WORKSPACE/artifacts/result.tar
       if: success()
 
     - name: Extract message.txt
       run: |
-        docker create --name temp-container your-docker-image-name
+        docker create --name temp-container message-image
         docker cp temp-container:/app/message.txt $GITHUB_WORKSPACE/artifacts/message.txt
         docker rm temp-container
 
