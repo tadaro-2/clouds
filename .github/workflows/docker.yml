@@ -19,13 +19,13 @@ jobs:
     - name: Save Docker Image Result
       run: |
         docker save message-image -o result.tar
-        mkdir -p $GITHUB_WORKSPACE/artifacts
-        mv result.tar $GITHUB_WORKSPACE/artifacts/result.tar
+        mkdir -p github_workspace/artifacts
+        mv result.tar github_workspace/artifacts
       if: success()
 
     - name: Upload Result
       uses: actions/upload-artifact@v2
       with:
         name: result
-        path: $GITHUB_WORKSPACE/artifacts/result.tar
+        path: github_workspace/artifacts
     
