@@ -12,10 +12,11 @@
 Например, пусть создаётся текстовый файл с коровой, которая сообщит нам рандомное предсказание. Будем сохранять его в папку ./files.
 
 ```dockerfile
-FROM alpine:3.14
-RUN apk --no-cache add fortune cowsay
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -y fortune cowsay
+RUN echo "meow" > /app/message.txt
 
-CMD ["fortune | cowsay", ".files/message.txt"]
+CMD ["sh", "-c", "fortune | cowsay > /app/message.txt"]
 ```
 
 Положим его в папку лабораторной. Его можно там найти и посмотреть, там написано всё то же самое.
