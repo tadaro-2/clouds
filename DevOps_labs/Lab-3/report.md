@@ -45,7 +45,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: docker build -t message-image ".\DevOps_labs\Lab-3\Dockerfile"
+      run: docker build -t message-image ".\DevOps_labs\Lab-3"
 
     - name: Save Docker Image Result
       run: |
