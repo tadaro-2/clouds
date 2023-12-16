@@ -9,12 +9,11 @@
 ### Создание Dockerfile
 
 Создадим какой-нибудь Dockerfile, из которого будет собираться образ. 
-Например, пусть создаётся текстовый файл с коровой, которая сообщит нам рандомное предсказание. Будем сохранять его в папку ./files.
+Например, пусть выведет нам корову, которая сообщит рандомное предсказание.
 
 ```dockerfile
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y fortune cowsay
-RUN echo "meow" > /DevOps_labs/Lab-3/files/message.txt
 
 CMD ["sh", "-c", "fortune | cowsay > /DevOps_labs/Lab-3/files/message.txt"]
 ```
@@ -51,25 +50,19 @@ jobs:
     - name: Save Docker Image Result
       run: |
         docker save message-image -o result.tar
-        mkdir -p $GITHUB_WORKSPACE/artifacts
-        mv result.tar $GITHUB_WORKSPACE/artifacts/result.tar
+        mkdir -p github_workspace/artifacts
+        mv result.tar github_workspace/artifacts
       if: success()
 
-    - name: Extract message.txt
-      run: |
-        docker create --name temp-container message-image
-        docker cp temp-container:/app/message.txt $GITHUB_WORKSPACE/artifacts/message.txt
-        docker rm temp-container
-
-    - name: Upload Artifact
+    - name: Upload Result
       uses: actions/upload-artifact@v2
       with:
-        name: docker-image
-        path: $GITHUB_WORKSPACE/artifacts
+        name: result
+        path: github_workspace/artifacts
 
 ```
 
-В нём мы указываем, что при пуше в ветку main будет происходить сборка образа, сохранение его в файл и его загрузка.
+В нём мы указываем, что при пуше в ветку main будет происходить сборка образа и его сохранение.
 
 
 ### Проверка
