@@ -45,7 +45,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker Image
-      run: docker build -t your-docker-image-name .
+      run: docker build -t your-docker-image-name "..\..\Dockerfile"
 
     - name: Save Docker Image Result
       run: |
