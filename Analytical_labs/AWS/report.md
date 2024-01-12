@@ -9,7 +9,7 @@
 
 ### Перенос .csv файла в формат excel
 
-![Данные в виде таблины Excel(./Pictures/isxod.png)
+![Данные в виде таблины Excel](./Pictures/isxod.png)
 
 ### Классификация сервисов 
 
