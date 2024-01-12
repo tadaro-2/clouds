@@ -26,7 +26,7 @@
     * [Лабораторная работа 3](./DevOps_labs/Lab-3/report.md)
 * [Аналитические лабы](./Analytical_labs)
   * TBA
-  * TBA
+  * [Azure](./Analytical_labs/Azure/report.md)
 * [Теория](./Theory)
   * [Теоретическое задание 1](./Theory/report.md#теоретическое-задание-1)
   * [Теоретическое задание 2](./Theory/report.md#теоретическое-задание-2)
